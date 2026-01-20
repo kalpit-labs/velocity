@@ -4,19 +4,34 @@ This guide will help you deploy your MongoDB Dashboard to Vercel (frontend) and 
 
 ## Prerequisites
 
-1. **MongoDB Atlas Account**
+1. **GitHub Account & Repository**
+   - Push your code to GitHub first
+   - See `GITHUB_SETUP.md` for detailed instructions
+
+2. **MongoDB Atlas Account**
    - Sign up at [mongodb.com/cloud/atlas](https://www.mongodb.com/cloud/atlas)
    - Create a free cluster
    - Get your connection string
-
-2. **GitHub Account**
-   - Push your code to a GitHub repository
 
 3. **Vercel Account**
    - Sign up at [vercel.com](https://vercel.com)
 
 4. **Render Account**
    - Sign up at [render.com](https://render.com)
+
+---
+
+## Step 0: Push to GitHub (If Not Done)
+
+If you haven't pushed to GitHub yet:
+
+```bash
+# Create repository on GitHub, then:
+git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+git push -u origin main
+```
+
+See `GITHUB_SETUP.md` for complete instructions.
 
 ---
 
