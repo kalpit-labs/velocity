@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight, Code, Table as TableIcon } from 'lucide-react';
-import ReactJson from 'react-json-view';
 
 const DocumentTable = ({ documents, pagination, onPageChange }) => {
   const [viewMode, setViewMode] = useState('table'); // 'table' or 'json'
@@ -143,15 +142,9 @@ const DocumentTable = ({ documents, pagination, onPageChange }) => {
         <div className="space-y-4">
           {documents.map((doc, idx) => (
             <div key={doc._id || idx} className="card">
-              <ReactJson
-                src={doc}
-                theme="rjv-default"
-                collapsed={1}
-                displayDataTypes={false}
-                displayObjectSize={true}
-                enableClipboard={true}
-                style={{ fontSize: '14px' }}
-              />
+              <pre className="overflow-x-auto p-4 bg-gray-50 rounded text-sm">
+                {JSON.stringify(doc, null, 2)}
+              </pre>
             </div>
           ))}
         </div>
